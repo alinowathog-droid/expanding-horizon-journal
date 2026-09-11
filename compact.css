@@ -1,87 +1,124 @@
-/* Compact journal design layer. Keeps the established identity while reducing unnecessary vertical space. */
+/* Compact scholarly journal design. */
 :root{--compact-gap:1rem}
 body{line-height:1.55}
 .container{width:min(calc(100% - 36px),1180px)}
 .nav-wrap{min-height:64px}
 .site-logo{width:180px;max-height:50px}
-.brand-mark{width:180px;height:50px}
 nav{gap:18px;font-size:12px}
 .nav-button{padding:8px 15px}
-.hero{padding:58px 0 54px}
-.hero-grid{gap:54px}
-.eyebrow{margin-bottom:12px}
-.hero h1{font-size:clamp(48px,7vw,82px);margin-bottom:20px}
-.lead{font-size:17px}
-.actions{margin-top:24px}
-.hero-card{padding:24px;min-height:300px}
-.hero-card p{font-size:17px;margin-top:16px}
-.stats div{padding:17px 20px}
-.stats strong{font-size:22px}
-.section{padding:62px 0}
-.two-col{gap:60px}
-.section h2{font-size:clamp(32px,4vw,50px);margin-bottom:18px}
-.cards{margin-top:30px}
-.cards article{padding:22px}
-.cards h3{font-size:21px;margin-bottom:8px}
-.issue{gap:60px}
-.issue-cover{height:340px;padding:30px;font-size:34px}
-.editorial-grid{margin-top:30px}
-.editorial-grid div{padding:25px}
-.clean-list{margin:18px 0 24px}
-.clean-list li{padding:8px 0}
-.policy-grid{margin-top:28px}
-.policy-grid a{padding:16px 18px}
-.submit-section{padding:52px 0}
+
+/* Homepage */
+.journal-hero{padding:48px 0 42px;background:var(--paper);border-bottom:1px solid var(--line)}
+.journal-hero-inner{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.75fr);gap:70px;align-items:end}
+.journal-hero h1{max-width:760px;font-size:clamp(44px,6vw,72px);line-height:1.02;letter-spacing:-.035em;margin:0 0 18px}
+.journal-hero .lead{max-width:720px;font-size:17px;margin:0}
+.journal-hero-meta{border-left:1px solid var(--line);padding-left:28px;display:grid;gap:0}
+.journal-hero-meta div{padding:14px 0;border-bottom:1px solid var(--line)}
+.journal-hero-meta div:last-child{border-bottom:0}
+.journal-hero-meta strong,.journal-hero-meta span{display:block}
+.journal-hero-meta strong{font-family:Georgia,'Times New Roman',serif;font-size:17px}
+.journal-hero-meta span{font-size:12px;color:var(--muted);margin-top:2px}
+.actions{margin-top:22px}
+
+.journal-overview{padding:48px 0;border-bottom:1px solid var(--line)}
+.overview-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.95fr);gap:70px;align-items:start}
+.overview-grid h2{font-size:clamp(30px,4vw,45px);line-height:1.08;margin:0 0 16px}
+.overview-grid p:not(.eyebrow){max-width:650px}
+.overview-links{border-top:1px solid var(--line)}
+.overview-links a,.info-list a{display:flex;justify-content:space-between;gap:25px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.overview-links a:hover,.info-list a:hover{color:var(--accent)}
+.overview-links strong,.info-list strong{font-size:14px}
+.overview-links span,.info-list span{font-size:12px;color:var(--muted);text-align:right}
+
+.section{padding:48px 0}
+.section-heading-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:24px}
+.section-heading-row h2{font-size:clamp(30px,4vw,44px);line-height:1.08;margin:0}
+.section-heading-row .text-link{white-space:nowrap;margin-bottom:3px}
+.article-section{padding-bottom:42px}
+.article-empty{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:35px}
+.empty-label{display:inline-block;font-size:10px;letter-spacing:.14em;color:var(--accent);font-weight:700;margin-bottom:8px}
+.article-empty h3{font-family:Georgia,'Times New Roman',serif;font-size:23px;margin:0 0 6px}
+.article-empty p{margin:0;color:var(--muted);max-width:700px}
+
+.issue-section{background:var(--cream)}
+.issue-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:42px;align-items:center}
+.issue-cover{height:300px;width:220px;display:flex;flex-direction:column;justify-content:space-between;background:#e2ddd1;padding:25px;font-family:Georgia,'Times New Roman',serif;font-size:27px;line-height:1.02;box-shadow:inset 0 0 0 1px rgba(24,33,31,.12)}
+.issue-cover span b{color:var(--accent)}
+.issue-cover small{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.12em}
+.issue-copy h3{font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:1.15;margin:4px 0 10px;max-width:650px}
+.issue-copy p{max-width:650px}
+
+.journal-info-section{padding-top:44px}
+.info-list{border-top:1px solid var(--line)}
+.info-list a{padding:16px 0}
+
+.submit-section{padding:42px 0}
 .submit-box{gap:35px}
-.submit-section h2{font-size:clamp(32px,4.5vw,50px)}
-footer{padding:45px 0 20px}
-.footer-grid{gap:30px}
-.footer-logo{width:220px}
-.copyright{margin-top:32px;padding-top:15px}
-.page-hero{padding:55px 0 45px}
-.page-hero h1{font-size:clamp(40px,5.5vw,68px);margin-bottom:18px}
+.submit-section h2{font-size:clamp(30px,4vw,46px);line-height:1.08}
+
+/* Existing internal pages */
+.page-hero{padding:48px 0 38px}
+.page-hero h1{font-size:clamp(38px,5vw,64px);margin-bottom:16px}
 .page-hero p:not(.eyebrow){font-size:16px}
-.issue-list article{padding:24px 0}
-.archive-row{padding:12px 0}
-.form-intro{margin-bottom:28px}
+.issue-list article{padding:22px 0}
+.archive-row{padding:11px 0}
+.form-intro{margin-bottom:26px}
 .journal-form{padding:24px}
-.form-section{padding-bottom:24px;margin-bottom:24px}
-.form-section h3{font-size:25px;margin-bottom:18px}
+.form-section{padding-bottom:22px;margin-bottom:22px}
+.form-section h3{font-size:24px;margin-bottom:16px}
 .form-grid{gap:14px}
-.journal-form label{margin-bottom:14px}
+.journal-form label{margin-bottom:13px}
 .journal-form input[type=text],.journal-form input[type=email],.journal-form input[type=file],.journal-form select,.journal-form textarea{padding:11px 12px;margin-top:6px}
-.process-list article{padding:25px 0;gap:25px}
+.process-list article{padding:23px 0;gap:23px}
+footer{padding:42px 0 18px}
+.footer-grid{gap:28px}
+.footer-logo{width:210px}
+.copyright{margin-top:28px;padding-top:14px}
+
 @media(max-width:900px){
   .container{width:min(calc(100% - 30px),1180px)}
   nav{top:64px;padding:12px 15px;gap:4px}
   nav a{padding:8px 6px}
-  .hero-grid,.two-col,.issue{gap:35px}
+  .journal-hero-inner,.overview-grid{grid-template-columns:1fr;gap:30px}
+  .journal-hero-meta{border-left:0;border-top:1px solid var(--line);padding:0;grid-template-columns:repeat(3,1fr)}
+  .journal-hero-meta div{padding:13px 16px 13px 0;border-bottom:0;border-right:1px solid var(--line)}
+  .journal-hero-meta div:last-child{border-right:0;padding-left:16px}
+  .overview-links{margin-top:4px}
   .cards,.policy-grid,.editorial-grid{grid-template-columns:1fr 1fr}
 }
+
 @media(max-width:600px){
   .container{width:min(calc(100% - 28px),1180px)}
   .nav-wrap{min-height:62px}
   .site-logo{width:160px;max-height:46px}
-  .brand-mark{width:160px;height:46px}
   nav{top:62px;padding:10px 14px}
-  .hero{padding:42px 0 40px}
-  .hero h1{font-size:48px;margin-bottom:16px}
-  .lead{font-size:16px}
-  .section{padding:44px 0}
-  .section h2{font-size:36px}
-  .cards,.policy-grid,.editorial-grid{grid-template-columns:1fr}
-  .hero-card{min-height:250px;padding:18px}
-  .issue-cover{height:300px;padding:25px;font-size:30px}
-  .stats div{padding:14px 15px}
-  .submit-section{padding:42px 0}
-  footer{padding-top:38px}
-  .footer-logo{width:205px}
-  .page-hero{padding:42px 0 36px}
-  .page-hero h1{font-size:42px}
+  .journal-hero{padding:36px 0 34px}
+  .journal-hero h1{font-size:43px}
+  .journal-hero .lead{font-size:16px}
+  .actions{margin-top:18px}
+  .journal-hero-meta{grid-template-columns:1fr;gap:0}
+  .journal-hero-meta div,.journal-hero-meta div:last-child{padding:10px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .journal-hero-meta div:last-child{border-bottom:0}
+  .journal-overview{padding:38px 0}
+  .overview-grid{gap:25px}
+  .overview-links a,.info-list a{align-items:flex-start;flex-direction:column;gap:4px;padding:13px 0}
+  .overview-links span,.info-list span{text-align:left}
+  .section{padding:38px 0}
+  .section-heading-row{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:20px}
+  .section-heading-row h2{font-size:34px}
+  .article-empty{align-items:flex-start;flex-direction:column;gap:18px;padding:20px 0}
+  .issue-row{grid-template-columns:1fr;gap:24px}
+  .issue-cover{width:190px;height:260px;font-size:24px}
+  .issue-copy h3{font-size:27px}
+  .submit-section{padding:38px 0}
+  footer{padding-top:34px}
+  .footer-logo{width:195px}
+  .page-hero{padding:38px 0 32px}
+  .page-hero h1{font-size:40px}
   .journal-form{padding:18px}
-  .form-section{padding-bottom:20px;margin-bottom:20px}
-  .form-section h3{font-size:23px;margin-bottom:15px}
-  .process-list article{grid-template-columns:42px 1fr;gap:12px;padding:20px 0}
-  .process-list article>span{font-size:25px}
-  .process-list h2{font-size:25px}
+  .form-section{padding-bottom:19px;margin-bottom:19px}
+  .form-section h3{font-size:22px;margin-bottom:14px}
+  .process-list article{grid-template-columns:42px 1fr;gap:12px;padding:19px 0}
+  .process-list article>span{font-size:24px}
+  .process-list h2{font-size:24px}
 }
