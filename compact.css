@@ -29,6 +29,33 @@ nav{gap:18px;font-size:12px}
 .overview-links strong,.info-list strong{font-size:14px}
 .overview-links span,.info-list span{font-size:12px;color:var(--muted);text-align:right}
 
+/* Publishing visibility marketing */
+.visibility-section{padding:38px 0 32px;background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.visibility-head{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-bottom:24px}
+.visibility-head h2{font-size:clamp(30px,4vw,44px);line-height:1.08;margin:0}
+.apc-box{min-width:190px;padding:13px 20px;background:var(--paper);border:1px solid var(--line);border-radius:12px;text-align:center;box-shadow:0 4px 16px rgba(24,33,31,.06)}
+.apc-box span,.apc-box strong,.apc-box small{display:block}
+.apc-box span{font-size:10px;letter-spacing:.16em;font-weight:800;color:var(--accent)}
+.apc-box strong{font-family:Georgia,'Times New Roman',serif;font-size:31px;line-height:1.05;margin:2px 0}
+.apc-box small{font-size:11px;color:var(--muted)}
+.visibility-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.visibility-logo{min-height:88px;padding:14px 15px;display:flex;align-items:center;justify-content:center;gap:9px;flex-direction:column;text-align:center;text-decoration:none;background:var(--paper);border:1px solid rgba(24,33,31,.1);border-radius:12px;box-shadow:0 4px 14px rgba(24,33,31,.045);transition:transform .18s ease,box-shadow .18s ease}
+.visibility-logo:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(24,33,31,.1)}
+.visibility-logo b{font-size:18px;line-height:1;color:currentColor}
+.visibility-logo>span:last-child,.visibility-logo b+span{font-size:9px;letter-spacing:.08em;font-weight:700;opacity:.7}
+.logo-symbol{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:#a6ce39;color:#fff;font-size:15px;font-weight:800}
+.logo-orcid{color:#5d8e18}
+.logo-crossref{color:#25364a}.crossref-icon{position:relative;width:34px;height:24px;display:block}.crossref-icon i{position:absolute;width:25px;height:14px;transform:skewY(-28deg);border-radius:2px}.crossref-icon i:first-child{left:0;top:2px;background:#f2a900}.crossref-icon i:last-child{right:0;bottom:2px;background:#1c8bc4}
+.logo-doi{color:#b02a30}.logo-doi span{font-family:Arial,sans-serif;font-weight:900;font-size:27px;letter-spacing:-.04em}.logo-doi b{font-size:9px;color:var(--muted);font-weight:700}
+.logo-scholar{color:#1967d2}.scholar-g{font-family:Arial,sans-serif;font-weight:800;font-size:30px;color:#4285f4}
+.logo-repec{color:#2459a6}.logo-repec b{font-size:24px}.logo-repec span{font-size:10px;letter-spacing:.14em;color:#777}
+.logo-doaj{color:#222}.doaj-icon{width:28px;height:28px;border-radius:6px;background:#ee5a3c;color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px}
+.logo-openaire{color:#263b91}.openaire-icon{font-size:24px;font-weight:900;color:#293b91}
+.logo-road{color:#a42f32}.logo-road span{font-size:23px;font-weight:900;letter-spacing:.06em}.logo-road b,.logo-base b{font-size:9px;color:var(--muted)}
+.logo-base{color:#315b9b}.logo-base span{font-size:22px;font-weight:900;letter-spacing:.05em}
+.visibility-footer{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:17px;font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+.visibility-footer span{position:relative}.visibility-footer span:not(:last-child)::after{content:'•';position:absolute;right:-18px;color:var(--accent)}
+
 .section{padding:48px 0}
 .section-heading-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:24px}
 .section-heading-row h2{font-size:clamp(30px,4vw,44px);line-height:1.08;margin:0}
@@ -38,7 +65,6 @@ nav{gap:18px;font-size:12px}
 .empty-label{display:inline-block;font-size:10px;letter-spacing:.14em;color:var(--accent);font-weight:700;margin-bottom:8px}
 .article-empty h3{font-family:Georgia,'Times New Roman',serif;font-size:23px;margin:0 0 6px}
 .article-empty p{margin:0;color:var(--muted);max-width:700px}
-
 .issue-section{background:var(--cream)}
 .issue-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:42px;align-items:center}
 .issue-cover{height:300px;width:220px;display:flex;flex-direction:column;justify-content:space-between;background:#e2ddd1;padding:25px;font-family:Georgia,'Times New Roman',serif;font-size:27px;line-height:1.02;box-shadow:inset 0 0 0 1px rgba(24,33,31,.12)}
@@ -46,36 +72,12 @@ nav{gap:18px;font-size:12px}
 .issue-cover small{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.12em}
 .issue-copy h3{font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:1.15;margin:4px 0 10px;max-width:650px}
 .issue-copy p{max-width:650px}
-
 .journal-info-section{padding-top:44px}
 .info-list{border-top:1px solid var(--line)}
 .info-list a{padding:16px 0}
-
 .submit-section{padding:42px 0}
 .submit-box{gap:35px}
 .submit-section h2{font-size:clamp(30px,4vw,46px);line-height:1.08}
-
-/* Homepage publishing, APC and visibility block. */
-.visibility-section{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.visibility-section .section-heading-row{align-items:end}
-.visibility-intro{max-width:820px;margin:0 0 28px;color:var(--muted);font-size:16px}
-.apc-box{min-width:190px;border-left:1px solid var(--line);padding-left:24px;display:flex;flex-direction:column;align-items:flex-start}
-.apc-box span{font-size:11px;letter-spacing:.16em;font-weight:700;color:var(--accent)}
-.apc-box strong{font-family:Georgia,'Times New Roman',serif;font-size:32px;line-height:1.05;margin:4px 0}
-.apc-box small{color:var(--muted);font-size:12px}
-.visibility-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.visibility-card{min-height:260px;padding:24px 20px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
-.visibility-card:last-child{border-right:0}
-.platform-mark{min-height:48px;display:flex;align-items:center;gap:8px;font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px}
-.platform-mark span{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;font-size:15px;font-weight:800}
-.orcid-mark{color:#5a6b2f}.orcid-mark span{background:#a6ce39;color:#fff}
-.crossref-mark{font-family:Arial,Helvetica,sans-serif;color:#111}
-.scholar-mark{font-family:Arial,Helvetica,sans-serif;color:#3f4d68}.scholar-mark span{font-size:28px;font-weight:400}
-.doaj-mark{color:#5c6b73;letter-spacing:.04em}
-.visibility-card h3{font-size:18px;margin-bottom:8px}
-.visibility-card p{font-size:14px;color:var(--muted);margin:0}
-.visibility-level{margin-top:22px;font-size:9px;letter-spacing:.14em;font-weight:700;color:var(--accent)}
-.visibility-note{margin:18px 0 0;font-size:12px;color:var(--muted)}
 
 /* Existing internal pages */
 .page-hero{padding:48px 0 38px}
@@ -96,6 +98,7 @@ footer{padding:42px 0 18px}
 .footer-logo{width:210px}
 .copyright{margin-top:28px;padding-top:14px}
 
+@media(max-width:1000px){.visibility-strip{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){
   .container{width:min(calc(100% - 30px),1180px)}
   nav{top:64px;padding:12px 15px;gap:4px}
@@ -105,12 +108,7 @@ footer{padding:42px 0 18px}
   .journal-hero-meta div{padding:13px 16px 13px 0;border-bottom:0;border-right:1px solid var(--line)}
   .journal-hero-meta div:last-child{border-right:0;padding-left:16px}
   .overview-links{margin-top:4px}
-  .cards,.policy-grid,.editorial-grid{grid-template-columns:1fr 1fr}
-  .visibility-grid{grid-template-columns:1fr 1fr}
-  .visibility-card:nth-child(2){border-right:0}
-  .visibility-card:nth-child(-n+2){border-bottom:1px solid var(--line)}
 }
-
 @media(max-width:600px){
   .container{width:min(calc(100% - 28px),1180px)}
   .nav-wrap{min-height:62px}
@@ -127,6 +125,14 @@ footer{padding:42px 0 18px}
   .overview-grid{gap:25px}
   .overview-links a,.info-list a{align-items:flex-start;flex-direction:column;gap:4px;padding:13px 0}
   .overview-links span,.info-list span{text-align:left}
+  .visibility-section{padding:32px 0 26px}
+  .visibility-head{align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:20px}
+  .apc-box{width:100%;min-width:0}
+  .visibility-strip{grid-template-columns:repeat(2,1fr);gap:9px}
+  .visibility-logo{min-height:82px;padding:11px 8px}
+  .visibility-logo b{font-size:16px}
+  .visibility-footer{gap:12px 22px;justify-content:flex-start;font-size:9px}
+  .visibility-footer span:not(:last-child)::after{right:-14px}
   .section{padding:38px 0}
   .section-heading-row{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:20px}
   .section-heading-row h2{font-size:34px}
@@ -145,11 +151,4 @@ footer{padding:42px 0 18px}
   .process-list article{grid-template-columns:42px 1fr;gap:12px;padding:19px 0}
   .process-list article>span{font-size:24px}
   .process-list h2{font-size:24px}
-  .visibility-section .section-heading-row{align-items:start;gap:24px}
-  .apc-box{min-width:0;border-left:0;border-top:1px solid var(--line);padding:14px 0 0;width:100%}
-  .visibility-grid{grid-template-columns:1fr}
-  .visibility-card,.visibility-card:nth-child(2),.visibility-card:nth-child(-n+2){border-right:0;border-bottom:1px solid var(--line)}
-  .visibility-card:last-child{border-bottom:0}
-  .visibility-card{min-height:0;padding:22px 0}
-  .platform-mark{margin-bottom:14px}
 }
