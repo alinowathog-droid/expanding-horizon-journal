@@ -1,5 +1,21 @@
-const toggle = document.querySelector('.menu-toggle');
+/* Compact navigation and shared journal interactions. */
+const compactLink = document.createElement('link');
+compactLink.rel = 'stylesheet';
+compactLink.href = 'compact.css';
+document.head.appendChild(compactLink);
+
 const nav = document.querySelector('#main-nav');
+const toggle = document.querySelector('.menu-toggle');
+
+if (nav) {
+  nav.innerHTML = `
+    <a href="index.html">Home</a>
+    <a href="journal.html">Journal</a>
+    <a href="archive.html">Articles</a>
+    <a href="authors.html">For Authors</a>
+    <a href="reviewers.html">For Reviewers</a>
+    <a class="nav-button" href="submit.html">Submit</a>`;
+}
 
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
@@ -17,7 +33,6 @@ if (toggle && nav) {
   });
 }
 
-/* Keep the journal identity consistent on legacy internal pages. */
 document.querySelectorAll('.brand').forEach((brand) => {
   if (!brand.querySelector('img')) {
     const image = document.createElement('img');
@@ -28,7 +43,6 @@ document.querySelectorAll('.brand').forEach((brand) => {
   }
 });
 
-/* Prevent accidental double submission while a form is being sent. */
 document.querySelectorAll('form.journal-form').forEach((form) => {
   form.addEventListener('submit', () => {
     const button = form.querySelector('button[type="submit"]');
