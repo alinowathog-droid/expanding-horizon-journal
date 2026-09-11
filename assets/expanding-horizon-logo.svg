@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+<title id="title">Expanding Horizon Journal</title>
+<desc id="desc">EH monogram rising over a horizon with Expanding Horizon Journal wordmark.</desc>
+<rect width="1200" height="440" fill="none"/>
+<g fill="none" stroke="#18211f" stroke-linecap="round">
+  <path d="M260 205 Q600 55 940 205" stroke-width="11"/>
+  <path d="M315 220 Q600 105 885 220" stroke="#8b4b32" stroke-width="5"/>
+</g>
+<g font-family="Georgia, 'Times New Roman', serif" font-weight="700">
+  <text x="390" y="205" font-size="205" fill="#18211f">E</text>
+  <text x="625" y="205" font-size="205" fill="#8b4b32">H</text>
+</g>
+<g stroke="#8b4b32" stroke-width="5" stroke-linecap="round">
+  <path d="M805 120 L820 73"/><path d="M825 125 L850 75"/><path d="M844 134 L880 92"/><path d="M860 147 L905 112"/>
+</g>
+<text x="600" y="300" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" letter-spacing="5" fill="#18211f">EXPANDING HORIZON</text>
+<g stroke="#8b4b32" stroke-width="3"><path d="M300 350 H475"/><path d="M725 350 H900"/></g>
+<text x="600" y="367" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" letter-spacing="14" fill="#8b4b32">JOURNAL</text>
+</svg>
